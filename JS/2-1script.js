@@ -8,15 +8,19 @@ function insertar(num){
 
 function c(){
     $('.display').val('');
+    $('.hist').val('');
     document.getElementById('hist').innerHTML = "";
+    for (let i = historial.length; i > 0; i--) {
+        historial.pop();
+      }
+      console.log(historial);
     
 }
 
 function del(){
     var value = $('.display').val();
     $('.display').val(value.substring(0,value.length-1));
-        var value = $('.hist').val();
-    $('.display').val(value.substring(0,value.length-1));
+  
 }
 
 function igual(){
